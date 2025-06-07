@@ -2,10 +2,6 @@
 
 This project explores machine learning classification methods in R to predict how closely AI-generated images resemble the visual style of **Studio Ghibli**. We used the **"AI Generated Ghibli Style Image Trends (2025)"** dataset, which contains metadata for 500 AI-generated images and includes features like generation time, platform, and user engagement.
 
-## 👥 Team Members
-- **Ranit Sharma** – R coding (preprocessing, modeling, evaluation)
-- **Vamsi Krishna Murali** – EDA visualizations and report writing
-
 ---
 
 ## 📊 Dataset
@@ -61,9 +57,3 @@ All preprocessing, modeling, and evaluation are contained in:
 - Machine learning (`rpart`, `klaR`, `caret`)  
 - Model evaluation & cross-validation  
 - Scientific writing and team collaboration
-
----
-
-## 📬 Contact
-- Ranit Sharma – rs2402@scarletmail.rutgers.edu  
-- Vamsi Krishna Murali – vkm35@scarletmail.rutgers.edu

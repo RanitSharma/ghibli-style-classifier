@@ -47,7 +47,7 @@ Full details of methodology, visuals, and evaluation results:
 
 ## 📜 R Script
 All preprocessing, modeling, and evaluation are contained in:  
-📁 [ghibli_classifier.R](./ghibli_classifier.R)
+📁 [ghibli_classifier.R](./ghibli_classifier.R.R)
 
 ---
 

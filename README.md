@@ -1,26 +1,69 @@
-# AI-Generated Ghibli Style Classifier
+# 🎨 AI-Generated Ghibli Style Classifier
 
-This project uses machine learning models in R to predict the **Style Accuracy Score (categorized)** of AI-generated Ghibli-style images, based on a 2025 dataset.
+This project explores machine learning classification methods in R to predict how closely AI-generated images resemble the visual style of **Studio Ghibli**. We used the **"AI Generated Ghibli Style Image Trends (2025)"** dataset, which contains metadata for 500 AI-generated images and includes features like generation time, platform, and user engagement.
+
+## 👥 Team Members
+- **Ranit Sharma** – R coding (preprocessing, modeling, evaluation)
+- **Vamsi Krishna Murali** – EDA visualizations and report writing
+
+---
 
 ## 📊 Dataset
-- **Title**: AI Generated Ghibli Style Image Trends (2025)
-- **Target**: Style Accuracy Score (categorized)
-- **Features**: Color palette, subject type, shading complexity, background detail, etc.
+- **Source**: [Kaggle - Ghibli Style AI Image Trends (2025)](https://www.kaggle.com/datasets/uom190346a/ai-generated-ghibli-style-image-trends-2025?resource=download)
+- **Size**: 500 AI-generated images with metadata
+- **Target Variable**: `style_accuracy_score` (transformed into categories: Low, Medium, High)
+- **Features**: likes, generation time, platform, shares, GPU usage, editing status, etc.
+
+---
 
 ## ⚙️ Methods
-- Data preprocessing in R
-- Built classification models using:
-  - Decision Trees (`rpart`)
-  - Naive Bayes (`e1071`)
-- Evaluated performance via cross-validation and confusion matrix
+
+- Cleaned and preprocessed data in R, removing irrelevant/unstructured columns
+- Converted continuous style scores into categorical labels:
+  - **Low** (0–60), **Medium** (61–80), **High** (81–100)
+- Split data (75% training / 25% testing) using `rsample::initial_split()`
+- Built and evaluated two classification models:
+  - **Decision Tree** using `rpart()` and `caret::train()` with 10-fold cross-validation
+  - **Naive Bayes** using `klaR::NaiveBayes()`
+- Evaluated using accuracy and confusion matrices
+
+---
 
 ## 📈 Results
-- Best model: Decision Tree with ~78% accuracy
-- Key finding: Images with detailed backgrounds and stylized characters scored higher
 
-## 🎤 Presentation
-(https://docs.google.com/document/d/1MX8DS-OxXHaidQj_ATnt5b59H76bzdMTksUPce_uBDw/edit?usp=sharing) – Presented at Rutgers as part of final project
+| Model         | Accuracy | Best Class Handling        |
+|---------------|----------|----------------------------|
+| Decision Tree | **78.6%** | Best overall performance with balanced predictions |
+| Naive Bayes   | 72.4%     | Struggled with minority class (Low) due to class imbalance |
+
+📌 **Key predictors**:  
+- `likes`  
+- `generation_time`  
+- `platform` (e.g. TikTok had highest quality scores)
+
+---
+
+## 📄 Project Report
+Full details of methodology, visuals, and evaluation results:  
+📎 [ghibli_project_report.pdf](./ghibli_project_report.pdf)
+
+---
+
+## 📜 R Script
+All preprocessing, modeling, and evaluation are contained in:  
+📁 [ghibli_classifier.R](./ghibli_classifier.R)
+
+---
 
 ## 🧠 Skills Used
-- R Programming, Data Wrangling, Model Evaluation
-- Classification, Cross-validation, Scientific Communication
+- R programming  
+- Data wrangling & visualization (`ggplot2`)  
+- Machine learning (`rpart`, `klaR`, `caret`)  
+- Model evaluation & cross-validation  
+- Scientific writing and team collaboration
+
+---
+
+## 📬 Contact
+- Ranit Sharma – rs2402@scarletmail.rutgers.edu  
+- Vamsi Krishna Murali – vkm35@scarletmail.rutgers.edu

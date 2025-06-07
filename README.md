@@ -19,7 +19,7 @@ This project uses machine learning models in R to predict the **Style Accuracy S
 - Key finding: Images with detailed backgrounds and stylized characters scored higher
 
 ## 🎤 Presentation
-[(https://docs.google.com/document/d/1MX8DS-OxXHaidQj_ATnt5b59H76bzdMTksUPce_uBDw/edit?usp=sharing)] – Presented at Rutgers as part of final project
+(https://docs.google.com/document/d/1MX8DS-OxXHaidQj_ATnt5b59H76bzdMTksUPce_uBDw/edit?usp=sharing) – Presented at Rutgers as part of final project
 
 ## 🧠 Skills Used
 - R Programming, Data Wrangling, Model Evaluation
